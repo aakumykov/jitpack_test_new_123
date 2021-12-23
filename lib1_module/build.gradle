@@ -3,8 +3,8 @@ plugins {
     id 'maven-publish'
 }
 
-//group = 'com.github.aakumykov'
-//version = '1.0'
+group = 'com.github.aakumykov'
+version = '1.4'
 
 android {
     compileSdk 31
@@ -46,15 +46,15 @@ afterEvaluate {
             // Creates a Maven publication called "release".
             release(MavenPublication) {
                 from components.release
-                groupId = 'com.github.aakumykov'
+//                groupId = 'com.github.aakumykov'
                 artifactId = 'lib1_module-release'
-                version = '1.4'
+                version = project.version
             }
             debug(MavenPublication) {
                 from components.debug
-                groupId = 'com.github.aakumykov'
+//                groupId = 'com.github.aakumykov'
                 artifactId = 'lib1_module-debug'
-                version = '1.4'
+//                version = '1.4'
             }
         }
     }
