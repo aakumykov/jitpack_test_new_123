@@ -46,15 +46,9 @@ afterEvaluate {
             // Creates a Maven publication called "release".
             release(MavenPublication) {
                 from components.release
-//                groupId = 'com.github.aakumykov'
-                artifactId = 'lib1_module-release'
-                version = project.version
-            }
-            debug(MavenPublication) {
-                from components.debug
-//                groupId = 'com.github.aakumykov'
-                artifactId = 'lib1_module-debug'
-//                version = '1.4'
+//                groupId = project.group
+//                artifactId = 'lib1_module-release'
+//                version = project.version
             }
         }
     }
